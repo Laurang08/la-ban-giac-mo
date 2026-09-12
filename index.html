@@ -82,7 +82,7 @@
   .collage svg{width:100%; height:100%; overflow:visible;}
   .ring{stroke-dasharray:4 7; animation:spin 60s linear infinite;}
   @keyframes spin{to{transform:rotate(360deg);}}
-  .draw{stroke-dasharray:500; stroke-dashoffset:500; animation:draw 1.8s ease-out forwards;}
+  .draw{stroke-dasharray:1200; stroke-dashoffset:1200; animation:draw 1.8s ease-out forwards;}
   @keyframes draw{to{stroke-dashoffset:0;}}
   @media (prefers-reduced-motion: reduce){ .ring{animation:none;} .draw{animation:none; stroke-dashoffset:0;} }
 
@@ -255,7 +255,7 @@
     <div class="collage" aria-hidden="true">
       <svg viewBox="0 0 360 360">
         <circle class="ring" cx="180" cy="176" r="150" fill="none" stroke="var(--ink-faint)" stroke-width="1" opacity=".45" style="transform-origin:180px 176px"/>
-        <path class="draw" d="M185 80 A95 95 0 1 0 185 270 A65 65 0 1 1 185 80 Z" fill="var(--surface-2)" stroke="var(--ink-faint)" stroke-width="1.2"/>
+        <path class="draw" d="M185 80 A95 95 0 1 0 185 270 A65 65 0 1 1 185 80 Z" fill="var(--surface-2)" stroke="var(--ink-soft)" stroke-width="1.4" opacity=".6"/>
 
         <g transform="translate(24,14) rotate(-6)">
           <rect width="80" height="80" rx="4" fill="var(--accent)"/>
