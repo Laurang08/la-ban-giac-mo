@@ -115,23 +115,17 @@
   .trait-example .tex-pn{display:flex; gap:16px; flex-wrap:wrap; font-size:.86rem;}
   .trait-example .tex-pn span.pos{color:var(--positive-ink);} .trait-example .tex-pn span.neg{color:var(--negative-ink);}
 
-  .elements{display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-top:36px;}
-  .element-card{background:var(--surface-2); border:1px solid var(--line); border-radius:4px; padding:16px 14px; text-align:left;}
-  .element-card .el-glyph{width:26px; height:26px; color:var(--accent); margin-bottom:8px;}
-  .element-card h4{font-size:.92rem; font-weight:700; margin-bottom:6px;}
-  .element-card p{font-size:.78rem; color:var(--ink-soft); margin:0 0 4px;}
-  .element-card .el-pos{color:var(--positive-ink); font-size:.76rem;}
-  .element-card .el-neg{color:var(--negative-ink); font-size:.76rem;}
-
   .decoder-grid{display:grid; grid-template-columns:1.3fr .7fr; gap:26px; align-items:start;}
   .notebook{background:var(--surface-2); border:1px solid var(--line); border-radius:6px; padding:28px 28px 24px; box-shadow:var(--shadow);}
   .field-label{font-size:.76rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); font-weight:700; margin-bottom:8px; display:block;}
+  .field-hint{font-size:.84rem; color:var(--ink-soft); margin:-2px 0 10px;}
   .field-block{margin-bottom:18px;}
   textarea.field-input, input.field-input{
     width:100%; border:1px solid var(--line); border-radius:4px; background:var(--bg); color:var(--ink);
     font-family:'Be Vietnam Pro',sans-serif; font-size:.96rem; padding:12px 14px; line-height:1.55;
   }
   textarea.field-input{min-height:64px; resize:vertical;}
+  textarea.field-input.big{min-height:150px;}
   textarea.field-input:focus, input.field-input:focus{border-color:var(--accent);}
   .chips{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 0;}
   .chip{font-size:.78rem; padding:6px 12px; border-radius:20px; border:1px dashed var(--line); background:transparent; color:var(--ink-soft); cursor:pointer; font-family:'Be Vietnam Pro',sans-serif;}
@@ -174,11 +168,6 @@
   .col-head{font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; font-weight:700; margin-bottom:7px; display:block;}
   .col-head.pos{color:var(--positive-ink);} .col-head.neg{color:var(--negative-ink);}
 
-  .element-result{display:flex; gap:14px; align-items:flex-start; background:var(--bg); border:1px solid var(--line); border-radius:4px; padding:16px 18px; margin-top:20px;}
-  .element-result .el-badge{flex:none; width:44px; height:44px; border-radius:50%; background:var(--accent); color:var(--accent-ink); display:flex; align-items:center; justify-content:center; font-family:'PT Serif',serif; font-weight:700;}
-  .element-result .el-reason{font-size:.86rem; color:var(--ink-soft); margin-bottom:6px;}
-  .element-result .el-pn{font-size:.86rem; display:flex; flex-direction:column; gap:3px;}
-
   .angel-note-box{margin-top:18px; border-left:2px solid var(--accent); padding:10px 0 10px 16px; font-size:.9rem; color:var(--ink-soft); font-style:italic;}
 
   .synthesis-box{margin-top:20px; background:var(--bg); border:1px solid var(--line); border-radius:4px; padding:18px 20px;}
@@ -203,7 +192,7 @@
   .journal-clear{margin-top:14px; font-size:.78rem; color:var(--ink-faint); background:none; border:none; cursor:pointer; text-decoration:underline;}
   .journal-clear:hover{color:var(--negative);}
 
-  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:36px;}
+  .about-grid{max-width:70ch;}
   .about-grid p{color:var(--ink-soft); font-size:.94rem;}
   .about-grid h3{font-size:1.02rem; margin-bottom:10px;}
   .disclaimer{margin-top:16px; font-size:.82rem; color:var(--ink-faint); border-left:2px solid var(--line); padding-left:14px;}
@@ -216,9 +205,7 @@
     .collage{max-width:240px; order:-1;}
     .axes{grid-template-columns:1fr;}
     .pn-row{grid-template-columns:1fr;}
-    .elements{grid-template-columns:repeat(2,1fr);}
     .decoder-grid{grid-template-columns:1fr;}
-    .about-grid{grid-template-columns:1fr;}
     .axis-result{grid-template-columns:1fr; gap:8px;}
     .trait-example{grid-template-columns:1fr;}
     .angel-row{flex-direction:column; gap:2px;}
@@ -246,7 +233,7 @@
     <div>
       <div class="eyebrow">Phương pháp DSSI</div>
       <h1>Giải mã các biểu tượng trong đời sống của bạn.</h1>
-      <p class="lede">Mỗi giấc mơ, mỗi hình ảnh lặp lại trong tâm trí đều mang một mã riêng. Mã Biểu Tượng đọc lại mã ấy qua ba trục <strong>Ở đâu – Ai – Điều gì</strong>, đối chiếu với đặc tính tự nhiên của biểu tượng và Ngũ Hành, để bạn thấy rõ điểm cộng và điểm trừ đang ẩn bên dưới.</p>
+      <p class="lede">Mỗi giấc mơ, mỗi hình ảnh lặp lại trong tâm trí đều mang một mã riêng. Mã Biểu Tượng đọc lại mã ấy qua ba trục <strong>Ở đâu – Ai – Điều gì</strong> và đối chiếu với đặc tính tự nhiên của biểu tượng, để bạn thấy rõ điểm cộng và điểm trừ đang ẩn bên dưới.</p>
       <div class="cta-row">
         <a href="#giai-ma" class="btn btn-primary">Giải mã ngay</a>
         <a href="#phuong-phap" class="btn btn-ghost">Xem cách vận hành</a>
@@ -378,39 +365,6 @@
         </div>
       </div>
     </div>
-
-    <div class="section-head" style="margin-top:48px;">
-      <div class="eyebrow">Lớp đối chiếu</div>
-      <h2>Ngũ Hành cộng hưởng</h2>
-      <p>Mỗi biểu tượng còn được soi qua một trong năm nguyên tố — mỗi nguyên tố có một biểu hiện quân bình và một biểu hiện lệch pha.</p>
-    </div>
-    <div class="elements">
-      <div class="element-card">
-        <svg class="el-glyph" viewBox="0 0 24 24" fill="none"><path d="M12 3c2 3 5 6 5 10a5 5 0 01-10 0c0-4 3-7 5-10Z" stroke="currentColor" stroke-width="1.5"/></svg>
-        <h4>Mộc</h4><p>Sinh trưởng, mở rộng, sáng tạo.</p>
-        <p class="el-pos">+ Linh hoạt vươn lên</p><p class="el-neg">− Bành trướng mất kiểm soát</p>
-      </div>
-      <div class="element-card">
-        <svg class="el-glyph" viewBox="0 0 24 24" fill="none"><path d="M12 2c1 4 5 6 5 11a5 5 0 11-10 0c0-2 1-3 2-4-.5 2 0 3 1 3 1-3-1-6 2-10Z" stroke="currentColor" stroke-width="1.5"/></svg>
-        <h4>Hoả</h4><p>Đam mê, chuyển hoá, toả sáng.</p>
-        <p class="el-pos">+ Nhiệt huyết truyền cảm hứng</p><p class="el-neg">− Bốc đồng, thiêu đốt</p>
-      </div>
-      <div class="element-card">
-        <svg class="el-glyph" viewBox="0 0 24 24" fill="none"><rect x="4" y="9" width="16" height="11" stroke="currentColor" stroke-width="1.5"/><path d="M4 9L12 3L20 9" stroke="currentColor" stroke-width="1.5"/></svg>
-        <h4>Thổ</h4><p>Ổn định, nuôi dưỡng, kết nối thực tế.</p>
-        <p class="el-pos">+ Nền tảng vững chắc</p><p class="el-neg">− Trì trệ, bám chấp</p>
-      </div>
-      <div class="element-card">
-        <svg class="el-glyph" viewBox="0 0 24 24" fill="none"><path d="M12 3L20 8V16L12 21L4 16V8Z" stroke="currentColor" stroke-width="1.5"/></svg>
-        <h4>Kim</h4><p>Kỷ luật, rõ ràng, tinh lọc.</p>
-        <p class="el-pos">+ Quyết đoán, biết buông</p><p class="el-neg">− Cứng nhắc, lạnh lùng</p>
-      </div>
-      <div class="element-card">
-        <svg class="el-glyph" viewBox="0 0 24 24" fill="none"><path d="M4 12q4-4 8 0t8 0" stroke="currentColor" stroke-width="1.5"/><path d="M4 17q4-4 8 0t8 0" stroke="currentColor" stroke-width="1.5" opacity=".55"/></svg>
-        <h4>Thuỷ</h4><p>Cảm xúc, trực giác, thích nghi.</p>
-        <p class="el-pos">+ Linh hoạt, thấu cảm</p><p class="el-neg">− Ngập lụt cảm xúc</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -418,8 +372,8 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Công cụ</div>
-      <h2>Kể lại theo Ở đâu – Ai – Điều gì</h2>
-      <p>Điền càng nhiều trục, phần giải mã càng chính xác — nhưng chỉ một trường cũng đủ để bắt đầu. Nếu biết mình đang đồng hành cùng Thiên Thần nào, hãy chọn thêm để có thêm một lớp thông điệp.</p>
+      <h2>Kể lại giấc mơ theo cách của bạn</h2>
+      <p>Viết tự do, không cần đúng khuôn mẫu — hoặc chỉ cần gõ một biểu tượng khiến bạn ấn tượng cũng đủ để bắt đầu. Nếu biết mình đang đồng hành cùng Thiên Thần nào, hãy chọn thêm để có thêm một lớp thông điệp.</p>
     </div>
 
     <div class="decoder-grid">
@@ -438,22 +392,19 @@
         </div>
 
         <div class="field-block">
-          <span class="field-label">Ở đâu?</span>
-          <textarea class="field-input" id="where-input" placeholder="Bối cảnh, không gian trong giấc mơ..."></textarea>
+          <span class="field-label">Giấc mơ / trải nghiệm của bạn</span>
+          <p class="field-hint">Gợi ý: giấc mơ mở đầu như thế nào, điều gì đang xảy ra, ai xuất hiện và họ đã làm gì.</p>
+          <textarea class="field-input big" id="dream-input" placeholder="Mở đầu giấc mơ ra sao... điều gì đang xảy ra... ai xuất hiện và họ làm gì..."></textarea>
         </div>
         <div class="field-block">
-          <span class="field-label">Ai xuất hiện?</span>
-          <textarea class="field-input" id="who-input" placeholder="Người thân, người lạ, hoặc chính bạn..."></textarea>
-        </div>
-        <div class="field-block">
-          <span class="field-label">Điều gì đã diễn ra?</span>
-          <textarea class="field-input" id="what-input" placeholder="Sự việc, hành động, biểu tượng chính..."></textarea>
+          <span class="field-label">Biểu tượng bạn ấn tượng trong mơ hoặc đời sống hằng ngày</span>
+          <input class="field-input" type="text" id="symbol-input" placeholder="Ví dụ: chiếc chìa khoá, ngọn lửa, con bướm...">
           <div class="chips" id="symbol-chips">
-            <button class="chip" type="button" data-fill="Tôi thấy một con rắn trườn qua chân mình.">Con rắn</button>
-            <button class="chip" type="button" data-fill="Răng của tôi rụng dần trong miệng.">Răng rụng</button>
-            <button class="chip" type="button" data-fill="Tôi bay lên cao khỏi mặt đất.">Bay lên</button>
-            <button class="chip" type="button" data-fill="Tôi bị ai đó rượt đuổi mà không chạy nổi.">Bị đuổi</button>
-            <button class="chip" type="button" data-fill="Nước lũ dâng cao tràn vào nhà.">Nước dâng</button>
+            <button class="chip" type="button" data-fill="Chiếc chìa khoá">Chiếc chìa khoá</button>
+            <button class="chip" type="button" data-fill="Ngọn lửa">Ngọn lửa</button>
+            <button class="chip" type="button" data-fill="Con bướm">Con bướm</button>
+            <button class="chip" type="button" data-fill="Cánh cửa đóng">Cánh cửa đóng</button>
+            <button class="chip" type="button" data-fill="Đồng hồ dừng lại">Đồng hồ dừng lại</button>
           </div>
         </div>
 
@@ -473,17 +424,6 @@
           </div>
 
           <div id="res-axes"></div>
-
-          <div class="element-result" id="element-result" style="display:none;">
-            <div class="el-badge" id="el-badge"></div>
-            <div style="flex:1;">
-              <div class="el-reason" id="el-reason"></div>
-              <div class="el-pn">
-                <span class="pos" id="el-pos"></span>
-                <span class="neg" id="el-neg"></span>
-              </div>
-            </div>
-          </div>
 
           <div class="angel-note-box" id="angel-note-box" style="display:none;"></div>
 
@@ -510,12 +450,8 @@
     <div class="about-grid">
       <div>
         <h3>Về phương pháp DSSI</h3>
-        <p>DSSI xem mỗi giấc mơ và mỗi biểu tượng lặp lại như một ngôn ngữ có thể học được: đọc theo ba trục Ở đâu – Ai – Điều gì, truy về đặc tính tự nhiên vốn có của biểu tượng, đối chiếu với Ngũ Hành và với hành trình nội tâm của riêng bạn để tìm ra điểm cộng cần nuôi dưỡng và điểm trừ cần chuyển hoá.</p>
+        <p>DSSI là cách để bạn học đọc lại những giấc mơ, dấu hiệu và biểu tượng cứ lặp đi lặp lại trong cuộc sống — thay vì bỏ qua chúng như những chuyện ngẫu nhiên. Càng hiểu rõ những thông điệp từ tiềm thức, bạn càng dễ nhận ra điều gì đang thật sự diễn ra bên trong mình, để bình tĩnh hơn và đưa ra những lựa chọn tỉnh táo hơn mỗi ngày.</p>
         <div class="disclaimer">Đây là công cụ hỗ trợ tự chiêm nghiệm, không thay thế cho tư vấn tâm lý hay chẩn đoán y khoa. Nếu một giấc mơ khiến bạn lo âu kéo dài, hãy tìm đến chuyên gia tâm lý.</div>
-      </div>
-      <div>
-        <h3>Dữ liệu của bạn được xử lý ra sao</h3>
-        <p>Nội dung bạn nhập được gửi tới Claude (tài khoản Claude của chính bạn) để phân tích, và không được máy chủ của trang này lưu lại. Sổ tay chỉ lưu trong trình duyệt của bạn (localStorage) — xoá dữ liệu trình duyệt sẽ xoá luôn sổ tay.</p>
       </div>
     </div>
   </div>
@@ -572,9 +508,8 @@
   ];
 
   var STORAGE_KEY = "mabieutuong.journal.v1";
-  var whereInput = document.getElementById("where-input");
-  var whoInput = document.getElementById("who-input");
-  var whatInput = document.getElementById("what-input");
+  var dreamInput = document.getElementById("dream-input");
+  var symbolInput = document.getElementById("symbol-input");
   var decodeBtn = document.getElementById("decode-btn");
   var stopBtn = document.getElementById("stop-btn");
   var statusLine = document.getElementById("status-line");
@@ -584,8 +519,8 @@
 
   document.querySelectorAll(".chip").forEach(function(btn){
     btn.addEventListener("click", function(){
-      whatInput.value = btn.getAttribute("data-fill");
-      whatInput.focus();
+      symbolInput.value = btn.getAttribute("data-fill");
+      symbolInput.focus();
     });
   });
 
@@ -667,7 +602,7 @@
       var m = document.createElement("div"); m.className = "meta";
       m.textContent = fmtDate(entry.ts) + (entry.angelName ? " · " + entry.angelName : "");
       var ex = document.createElement("div"); ex.className = "excerpt";
-      ex.textContent = entry.what || entry.who || entry.where || "(không mô tả)";
+      ex.textContent = entry.symbol || entry.dream || "(không mô tả)";
       meta.appendChild(m); meta.appendChild(ex);
       var del = document.createElement("button");
       del.type = "button"; del.setAttribute("aria-label","Xoá mục này"); del.textContent = "×";
@@ -678,7 +613,7 @@
       });
       li.appendChild(meta); li.appendChild(del);
       li.addEventListener("click", function(){
-        whereInput.value = entry.where || ""; whoInput.value = entry.who || ""; whatInput.value = entry.what || "";
+        dreamInput.value = entry.dream || ""; symbolInput.value = entry.symbol || "";
         renderResult(entry.result);
         window.scrollTo({top: resultBox.getBoundingClientRect().top + window.scrollY - 100, behavior: "smooth"});
       });
@@ -736,15 +671,6 @@
     resAxes.appendChild(axisBlock("Ai", data.who));
     resAxes.appendChild(axisBlock("Điều gì", data.what));
 
-    var elBox = document.getElementById("element-result");
-    if(data.element && data.element.name){
-      elBox.style.display = "flex";
-      document.getElementById("el-badge").textContent = data.element.name;
-      document.getElementById("el-reason").textContent = data.element.reason || "";
-      document.getElementById("el-pos").textContent = "+ " + (data.element.positive || "");
-      document.getElementById("el-neg").textContent = "− " + (data.element.negative || "");
-    } else { elBox.style.display = "none"; }
-
     var angelBox = document.getElementById("angel-note-box");
     if(data.angel_note && data.angel_note.trim()){
       angelBox.style.display = "block";
@@ -760,19 +686,18 @@
     resultBox.classList.add("show");
   }
 
-  function buildPrompt(where, who, what, angel){
-    var p = "Bạn là một người đồng hành giải mã biểu tượng, áp dụng phương pháp DSSI: đọc giấc mơ/biểu tượng theo ba trục Ở ĐÂU (bối cảnh), AI (nhân vật) và ĐIỀU GÌ (sự việc/hành động/biểu tượng chính), đồng thời truy về đặc tính tự nhiên vốn có của biểu tượng chính để suy ra điểm cộng và điểm trừ, và đối chiếu với Ngũ Hành (Kim, Mộc, Thuỷ, Hoả, Thổ).\n\n";
+  function buildPrompt(dream, symbol, angel){
+    var p = "Bạn là một người đồng hành giải mã biểu tượng, áp dụng phương pháp DSSI: đọc mô tả của người dùng, tự nhận diện bên trong đó ba trục Ở ĐÂU (bối cảnh), AI (nhân vật) và ĐIỀU GÌ (sự việc/hành động/biểu tượng chính), đồng thời truy về đặc tính tự nhiên vốn có của biểu tượng chính để suy ra điểm cộng và điểm trừ.\n\n";
     p += "NGUYÊN TẮC SUY LUẬN BIỂU TƯỢNG: Với biểu tượng chính (con vật, cây cối, đồ vật, hiện tượng tự nhiên...), trước tiên mô tả đặc điểm/đặc tính tự nhiên vốn có của nó (ví dụ: một loài cây tán rộng vốn có đặc tính che bóng, bảo vệ các cây nhỏ xung quanh). Điểm cộng là khi đặc tính đó được biểu hiện trọn vẹn, đúng đắn; điểm trừ là khi đặc tính đó bị biến dạng, thái quá hoặc mất đi (ví dụ cây tán rộng nhưng không còn khả năng che chở ai).\n\n";
-    p += "NGŨ HÀNH: Mộc (sinh trưởng, mở rộng — cộng: linh hoạt vươn lên; trừ: bành trướng mất kiểm soát). Hoả (đam mê, chuyển hoá — cộng: nhiệt huyết truyền cảm hứng; trừ: bốc đồng, thiêu đốt). Thổ (ổn định, nuôi dưỡng — cộng: nền tảng vững chắc; trừ: trì trệ, bám chấp). Kim (kỷ luật, tinh lọc — cộng: quyết đoán, biết buông; trừ: cứng nhắc, lạnh lùng). Thuỷ (cảm xúc, trực giác — cộng: linh hoạt thấu cảm; trừ: ngập lụt cảm xúc, hỗn loạn).\n\n";
     if(angel){
       p += "Người mơ hiện đang đồng hành cùng Thiên Thần " + angel.name + " (" + angel.trait + "). Hãy liên hệ ngắn gọn thông điệp giấc mơ với hành trình cùng thiên thần này trong trường 'angel_note'.\n\n";
     } else {
       p += "Người mơ chưa chọn Thiên Thần đồng hành — để trường 'angel_note' là chuỗi rỗng.\n\n";
     }
-    p += "Mô tả của người mơ (tiếng Việt):\n";
-    p += "- Ở đâu: " + (where || "(không mô tả)") + "\n";
-    p += "- Ai xuất hiện: " + (who || "(không mô tả)") + "\n";
-    p += "- Điều gì đã diễn ra: " + (what || "(không mô tả)") + "\n\n";
+    p += "Mô tả của người dùng (tiếng Việt):\n";
+    p += "- Giấc mơ / trải nghiệm: " + (dream || "(không mô tả)") + "\n";
+    p += "- Biểu tượng ấn tượng: " + (symbol || "(không mô tả)") + "\n\n";
+    p += "Từ mô tả tự do đó, hãy tự xác định bối cảnh (ở đâu), nhân vật (ai) và sự việc chính (điều gì) một cách hợp lý. Nếu người dùng chỉ điền biểu tượng ấn tượng mà không mô tả giấc mơ, hãy suy luận Ở đâu/Ai/Điều gì dựa trên bối cảnh thường gặp của biểu tượng đó, và ghi chú ngắn gọn điều này trong 'summary'.\n\n";
     p += "Chỉ trả lời bằng một object JSON DUY NHẤT theo đúng cấu trúc sau, viết bằng tiếng Việt, giọng văn ấm áp, rõ ràng, không phán xét, không chẩn đoán y khoa/tâm lý:\n\n";
     p += "{\n";
     p += '  "summary": "1-2 câu tóm tắt cốt lõi",\n';
@@ -780,12 +705,11 @@
     p += '  "where": {"positives": ["..."], "negatives": ["..."]},\n';
     p += '  "who": {"positives": ["..."], "negatives": ["..."]},\n';
     p += '  "what": {"positives": ["..."], "negatives": ["..."]},\n';
-    p += '  "element": {"name": "một trong Kim|Mộc|Thuỷ|Hoả|Thổ", "reason": "vì sao nguyên tố này cộng hưởng, 1 câu", "positive": "biểu hiện tích cực của nguyên tố trong giấc mơ này", "negative": "biểu hiện mất cân bằng của nguyên tố trong giấc mơ này"},\n';
     p += '  "angel_note": "1-2 câu liên hệ với Thiên Thần đã chọn, hoặc chuỗi rỗng nếu không chọn",\n';
     p += '  "synthesis": "3-5 câu tổng hợp thông điệp mà vô thức có thể đang gửi gắm",\n';
     p += '  "questions": ["câu hỏi phản tư 1", "câu hỏi phản tư 2", "câu hỏi phản tư 3"]\n';
     p += "}\n\n";
-    p += "Mỗi mảng positives/negatives có 2-3 mục, mỗi mục dưới 15 từ. Nếu người mơ chỉ điền một trong ba trường, hãy suy luận hợp lý phần còn thiếu dựa trên bối cảnh thường gặp và ghi chú ngắn gọn điều này trong 'summary'.";
+    p += "Mỗi mảng positives/negatives có 2-3 mục, mỗi mục dưới 15 từ.";
     return p;
   }
 
@@ -811,11 +735,11 @@
   function setBusy(isBusy){ decodeBtn.disabled = isBusy; stopBtn.style.display = isBusy ? "inline-flex" : "none"; }
 
   decodeBtn.addEventListener("click", function(){
-    var where = whereInput.value.trim(), who = whoInput.value.trim(), what = whatInput.value.trim();
-    if(!where && !who && !what){
-      statusLine.textContent = "Hãy điền ít nhất một trong ba trường trước đã.";
+    var dream = dreamInput.value.trim(), symbol = symbolInput.value.trim();
+    if(!dream && !symbol){
+      statusLine.textContent = "Hãy kể một giấc mơ hoặc điền một biểu tượng trước đã.";
       statusLine.className = "status-line err";
-      whatInput.focus();
+      dreamInput.focus();
       return;
     }
     samplePromise.then(function(sample){
@@ -831,12 +755,12 @@
       statusLine.textContent = "Đang lần theo dấu vết vô thức...";
       resultBox.classList.remove("show");
 
-      sample.json(buildPrompt(where, who, what, selectedAngel), { signal: ctl.signal, modelTier: "default" })
+      sample.json(buildPrompt(dream, symbol, selectedAngel), { signal: ctl.signal, modelTier: "default" })
         .then(function(data){
           statusLine.textContent = "";
           renderResult(data);
           var entries = loadJournal();
-          entries.push({ ts: Date.now(), where: where, who: who, what: what, angelName: selectedAngel ? selectedAngel.name : "", result: data });
+          entries.push({ ts: Date.now(), dream: dream, symbol: symbol, angelName: selectedAngel ? selectedAngel.name : "", result: data });
           if(entries.length > 50) entries = entries.slice(entries.length - 50);
           saveJournal(entries);
           renderJournal();
